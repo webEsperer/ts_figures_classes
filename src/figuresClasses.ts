@@ -5,9 +5,9 @@ export interface Figure {
 }
 
 export class Triangle implements Figure {
-  color: 'red' | 'green' | 'blue';
+  public color: 'red' | 'green' | 'blue';
 
-  shape: 'triangle';
+  public shape: 'triangle';
 
   private a: number;
 
@@ -26,7 +26,7 @@ export class Triangle implements Figure {
     }
 
     if (a + b <= c || a + c <= b || b + c <= a) {
-      throw new Error(`Sides ${a}, ${b} and ${c} can't form a triangle`);
+      throw new Error(`Sides ${a}, ${b}, and ${c} can't form a triangle`);
     }
 
     this.color = color;
@@ -48,9 +48,9 @@ export class Triangle implements Figure {
 }
 
 export class Circle implements Figure {
-  color: 'red' | 'green' | 'blue';
+  public color: 'red' | 'green' | 'blue';
 
-  shape: 'circle';
+  public shape: 'circle';
 
   private radius: number;
 
@@ -70,9 +70,9 @@ export class Circle implements Figure {
 }
 
 export class Rectangle implements Figure {
-  color: 'red' | 'green' | 'blue';
+  public color: 'red' | 'green' | 'blue';
 
-  shape: 'rectangle';
+  public shape: 'rectangle';
 
   private width: number;
 
